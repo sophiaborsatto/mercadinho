@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Market</title>
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+  <div id="tela-login">
+    <h2>Login</h2>
+    <input type="text" id="campo-usuario" placeholder="Digite seu nome de usuário">
+    <button onclick="fazerLogin()">Entrar</button>
+  </div>
+
+  <div id="aplicativo" style="display:none;"> 
+    <header>
+      <h1>Seja bem-vindo ao Mercado Digital</h1>
+      <button onclick="fazerLogout()">Sair</button>
+    </header>
+
+    <section id="catalogo">
+      <h2>Catálogo de Produtos</h2>
+      <div id="lista-produtos"></div>
+    </section>
+
+    <section id="carrinho">
+      <h2>Carrinho de Compras</h2>
+      <ul id="itens-carrinho"></ul>
+      <p>Total: R$ <span id="total-carrinho">0.00</span></p>
+      <button onclick="abrirCheckout()">Finalizar Compra</button>
+    </section>
+
+    <section id="tela-checkout" style="display:none;">
+      <h2>Checkout</h2>
+      <label>Método de pagamento:
+        <select id="metodo-pagamento">
+          <option value="pix">Pix</option>
+          <option value="cartao">Cartão de Crédito</option>
+          <option value="boleto">Boleto</option>
+        </select>
+      </label>
+      <input type="text" id="campo-endereco" placeholder="Endereço para entrega">
+      <button onclick="confirmarPedido()">Confirmar Pedido</button>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
