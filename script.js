@@ -125,7 +125,7 @@ function abrirCheckout() {
   });
 
   const totalEl = document.createElement('p');
-  totalEl.innerHTML = <strong>Total: R$ ${total.toFixed(2)}</strong>;
+  totalEl.innerHTML = `<strong>Total: R$ ${total.toFixed(2)}</strong>`;
 
   resumo.appendChild(ul);
   resumo.appendChild(totalEl);
